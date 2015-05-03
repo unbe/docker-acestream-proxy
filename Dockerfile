@@ -1,13 +1,13 @@
-# Set the base image to use to Ubuntu
-FROM 32bit/ubuntu:14.04
+# Set the base image to use to Wheezy
+FROM 32bit/debian:wheezy
 
 MAINTAINER Igor Katson <igor.katson@gmail.com>
 
 RUN apt-get update -y
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y wget supervisor unzip ca-certificates
 
-RUN echo 'deb http://repo.acestream.org/ubuntu/ raring main' > /etc/apt/sources.list.d/acestream.list
-RUN wget -q -O - http://repo.acestream.org/keys/acestream.public.key | apt-key add -
+RUN echo 'deb http://repo.acestream.org/debian/ wheezy main' > /etc/apt/sources.list.d/acestream.list
+RUN wget -O - http://repo.acestream.org/keys/acestream.public.key | apt-key add -
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -y
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y acestream-engine vlc-nox python-gevent
