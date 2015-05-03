@@ -19,7 +19,6 @@ RUN adduser --disabled-password --gecos "" tv
 
 RUN cd /tmp/ && wget https://github.com/ValdikSS/aceproxy/archive/master.zip -O master.zip
 RUN cd /tmp/ && unzip master.zip -d /home/tv/
-RUN mv /home/tv/aceproxy-* /home/tv/aceproxy-master
 
 RUN echo 'root:ptnhui' |chpasswd
 
