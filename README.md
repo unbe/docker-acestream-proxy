@@ -20,7 +20,7 @@ Then just do something like this, to launch a proxy for Torrent-TV:
 1. Build the image.
    
   ```
-  docker build -t ikatson/aceproxy git://github.com/ikatson/docker-acestream-proxy.git
+  docker build -t aceproxy git://github.com/unbe/docker-acestream-proxy.git
   ```
 
   OR download the binary one, this is faster
