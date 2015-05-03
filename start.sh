@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TTV_URL="$1"
-HOST_IP="$(hostname -I | sed 's/ *$//')"
+HOST_IP="$(hostname -I | cut -d' ' -f1)"
 
 if [[ -n "$TTV_URL" ]]; then
     cat > /home/tv/aceproxy-master/plugins/config/torrenttv.py << EOF
