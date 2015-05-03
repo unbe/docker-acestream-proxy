@@ -10,7 +10,7 @@ RUN echo 'deb http://repo.acestream.org/debian/ wheezy main' > /etc/apt/sources.
 RUN wget -q -O - http://repo.acestream.org/keys/acestream.public.key | apt-key add -
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -y
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y acestream-engine vlc-nox python-gevent
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y acestream-engine vlc-nox python-gevent python-psutil less telnet
 
 RUN mkdir -p /var/run/sshd
 RUN mkdir -p /var/log/supervisor
